@@ -1,8 +1,9 @@
 import streamlit as st
-import pickle
 import numpy as np
 
-model = pickle.load(open("credit_model.pkl", "rb"))
+import joblib
+
+model = joblib.load("credit_model_small.pkl")
 
 st.set_page_config(
     page_title="Credit Risk Predictor",
